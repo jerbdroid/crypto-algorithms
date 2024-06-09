@@ -1,0 +1,12 @@
+cc_library(
+    name = "crypto",
+    srcs = glob(
+        ["*.cpp"],
+        exclude = ["*_test.c"],
+    ),
+    hdrs = glob([
+        "*.hpp",
+    ]),
+    include_prefix = "crypto",
+    visibility = ["//visibility:public"],
+)
