@@ -1,1 +1,4 @@
 MODULE.bazel.lock
+bazel-*
+.cache/
+external/

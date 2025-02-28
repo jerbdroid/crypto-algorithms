@@ -2,3 +2,17 @@ module(
     name = "crypto",
     version = "1.0.0",
 )
+
+
+bazel_dep(name = "hedron_compile_commands", dev_dependency = True)
+git_override(
+    module_name = "hedron_compile_commands",
+    commit = "4f28899228fb3ad0126897876f147ca15026151e",
+    remote = "https://github.com/hedronvision/bazel-compile-commands-extractor.git", 
+)
+
+git_override(
+    module_name = "rules_cc",
+    commit = "37bd3705999c6cf6f85e09f8e1a5aed025102e15",
+    remote = "https://github.com/jerbdroid/rules_cc.git"
+)
