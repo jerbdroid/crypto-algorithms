@@ -102,7 +102,7 @@ void sha256Init(SHA256_CTX& ctx) {
   ctx.state[7] = 0x5be0cd19;
 }
 
-void sha256Update(SHA256_CTX& ctx, const std::span<Byte> data) {
+void sha256Update(SHA256_CTX& ctx, std::span<const Byte> data){
   for (const auto& data_chunk : data) {
     ctx.data[ctx.datalen] = data_chunk;
     ctx.datalen++;
